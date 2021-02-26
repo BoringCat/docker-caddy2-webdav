@@ -28,6 +28,7 @@ service:
       WEBDAV_PORT: 5005
       WEBDAV_USERNAME: boringcat
       WEBDAV_PASSWORD: "!n*&3#V5^&!w#^"
+      WEBDAV_ALLOWIP: "192.168.0.0/16 fe80::/64"
     volumes:
       - /home/boringcat/sharefiles:/www
     ports:
@@ -41,10 +42,14 @@ service:
 |WEBDAV_PREFIX| | webdav的路径前缀 [#参见][1] |
 |WEBDAV_USERNAME| | 访问所需的用户名 |
 |WEBDAV_PASSWORD| | 访问所需的密码 |
-|WEBDAV_SERVERNAME| | Caddy 监听的[**访问地址**][2] [#或参见][3] |
-|WEBDAV_PORT| `80` | Caddy 监听的[**端口**][2] [#或参见][3] |
+|WEBDAV_SERVERNAME| | Caddy 监听的 HTTP 主机名 |
+|WEBDAV_PORT| `80` | Caddy 监听的 HTTP 端口 |
+|WEBDAV_ALLOWIP| | 允许访问webdav的IP地址 |
+|WEBDAV_ENABLETLS| | 启用HTTPS配置 |
+|WEBDAV_TLS_CERT| | TLS证书 CERT文件 |
+|WEBDAV_TLS_KEY| | TLS证书 KEY文件 |
+|WEBDAV_TLS_SERVERNAME| | Caddy 监听的 HTTPS 主机名 |
+|WEBDAV_TLS_PORT| | Caddy 监听的 HTTPS 端口 |
 
 
 [1]: https://github.com/mholt/caddy-webdav
-[2]: https://caddyserver.com/docs/caddyfile/concepts#addresses
-[3]: https://caddyserver.com/docs/caddyfile/concepts#structure

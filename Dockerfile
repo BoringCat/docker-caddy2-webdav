@@ -10,6 +10,6 @@ ENV WEBDAV_ROOT="/www"\
 
 COPY docker-entrypoint.sh /usr/local/sbin/entrypoint.sh
 
-VOLUME [ "/www" ]
+VOLUME [ "/www", "/tmp/caddy" ]
 EXPOSE 80
 ENTRYPOINT [ "/usr/local/sbin/entrypoint.sh" ]

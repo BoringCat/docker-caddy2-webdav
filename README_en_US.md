@@ -27,6 +27,7 @@ service:
       WEBDAV_PORT: 5005
       WEBDAV_USERNAME: boringcat
       WEBDAV_PASSWORD: "!n*&3#V5^&!w#^"
+      WEBDAV_ALLOWIP: "192.168.0.0/16 fe80::/64"
     volumes:
       - /home/boringcat/sharefiles:/www
     ports:
@@ -42,6 +43,12 @@ service:
 |WEBDAV_PASSWORD| | HTTP BasicAuth password |
 |WEBDAV_SERVERNAME| | [**Site Address**][2] for caddy [#See Also][3] |
 |WEBDAV_PORT| `80` | [**Listen port**][2] for caddy [#See Also][3] |
+|WEBDAV_ALLOWIP| | Allow access ip cldrs |
+|WEBDAV_ENABLETLS| | Enable tls config |
+|WEBDAV_TLS_CERT| | path to cert.pem file |
+|WEBDAV_TLS_KEY| | path to key.pem file |
+|WEBDAV_TLS_SERVERNAME| ${WEBDAV_SERVERNAME} | Site TLS Address for caddy |
+|WEBDAV_TLS_PORT| | TLS Listen port for caddy |
 
 
 [1]: https://github.com/mholt/caddy-webdav
