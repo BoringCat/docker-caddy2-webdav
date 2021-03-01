@@ -50,6 +50,10 @@ service:
 |WEBDAV_TLS_SERVERNAME| ${WEBDAV_SERVERNAME} | Site TLS Address for caddy |
 |WEBDAV_TLS_PORT| | TLS Listen port for caddy |
 
+## Custom Caddyfile
+Mount Caddyfile into container
+Just change entrypoint to /usr/local/sbin/caddy and use `run -config /path/to/Caddyfile`
+
 
 [1]: https://github.com/mholt/caddy-webdav
 [2]: https://caddyserver.com/docs/caddyfile/concepts#addresses

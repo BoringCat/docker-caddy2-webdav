@@ -51,5 +51,10 @@ service:
 |WEBDAV_TLS_SERVERNAME| | Caddy 监听的 HTTPS 主机名 |
 |WEBDAV_TLS_PORT| | Caddy 监听的 HTTPS 端口 |
 
+## 自定义Caddyfile
+把 Caddyfile 挂进去
+把 entrypoint 改成 /usr/local/sbin/caddy，加上命令 `run -config /path/to/Caddyfile` 就好了
+
+
 
 [1]: https://github.com/mholt/caddy-webdav
