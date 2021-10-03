@@ -76,4 +76,6 @@ echo "*************** Caddyfile ***************"
 cat ${CADDYFILE}
 echo "****************************************"
 
+[ -f "/tmp/caddy/admin.sock" ] && rm /tmp/caddy/admin.sock
+
 exec /usr/local/sbin/caddy run -config ${CADDYFILE}
